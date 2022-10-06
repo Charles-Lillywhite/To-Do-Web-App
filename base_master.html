@@ -1,0 +1,30 @@
+<!-- todo_list/todo_app/templates/base.html -->
+<!-- Base template, contains the basic info on which other templates will build -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Simple.css-->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>Charlie's to-do-list</title>
+</head>
+
+<body>
+    <div>
+        <h1 onclick="location.href='{% url "index" %}'">
+            Charlie's to-do list
+	<!-- the syntax here tells the webpage to go to the index (homepage) when we click this h1 heading. We need to add "index" to the url patterns in urls.py -->
+        </h1>
+    </div>
+    <div>
+        {% block content %}
+        This content will be replaced by different html code for each page.
+        {% endblock %}
+    </div>
+</body>
+
+</html>
