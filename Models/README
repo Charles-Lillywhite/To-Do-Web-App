@@ -6,4 +6,4 @@ In this application we have two types of data object:
 1 - ToDoList (with a title)
 2 - ToDoItem (with title, description, created date, due date), belonging to a given ToDoList
 
-In this pyhton code we define our two data objects using classes. See the comments on the file for a description of how everything works!
+In this Python code we define our two data objects using classes. See the comments on the file for a description of how everything works!
