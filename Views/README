@@ -1,0 +1,12 @@
+A 'View' is a piece of code which tells Django how to navigate between web pages, and which data to send along to be displayed as it does.
+
+Web apps work by recieving an 'HTTP Request' form the browser, deciding what to do with it, and sending back an appropriate response.
+The app then idles, waiting for another request to come along. In Django, the request-response cycle is controlled by the Views which
+we define. The View's main function is to take in an HttpRequest Python object and return an HttpResponse Python object.
+
+In this example we are using a class-based approach to creating views; this utilises the power of inheritance, and enables Django's predefined views to do most of the heavy lifting!
+You will notice that we call Django's 'ListView' classes, using the inheritance to define our 'ListListView' and 'ItemListView' objects.
+
+We write views to fulfill each of the CRUD operations on our lists and their items: Create, Read, Update, and Delete. 
+
+See individual files for a description of what's going on (commenting is a work in progress!)
