@@ -9,4 +9,4 @@ You will notice that we call Django's 'ListView' classes, using the inheritance 
 
 We write views to fulfill each of the CRUD operations on our lists and their items: Create, Read, Update, and Delete. 
 
-See individual files for a description of what's going on (commenting is a work in progress!)
+See .views file for a description of what's going on (commenting is a work in progress!)
