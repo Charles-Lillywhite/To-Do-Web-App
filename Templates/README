@@ -1,0 +1,5 @@
+Templates are essentially pieces of HTML (with some additional mark-up and pythonic logic) which tells the browser how to display the information/data.
+
+Here, we define a 'Base' HTML template, which all the others can inherit from (and add to), in order to avoid lots of repetition.
+
+Commenting on each file is a work in progress, but will shed light on what exactly each one does!
