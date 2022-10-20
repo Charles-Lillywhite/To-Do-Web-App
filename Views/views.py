@@ -28,13 +28,21 @@ class ItemListView(ListView):
     model = ToDoItem
     template_name = "todo_app/todo_list.html"
 
-    def get_queryset(self):
-        return ToDoItem.objects.filter(todo_list_id=self.kwargs["list_id"])
-
+    def get_queryset(self): # restrict the data items returned when listing the items in a to-do-list
+        return ToDoItem.objects.filter(todo_list_id=self.kwargs["list_id"]) # only fetch the items which match the id of the list we are considering
+        
+        # E.g if we are listing a to-do list for 'household chores', we do not need to list the items in our 'Gym exercises' to-do list.
+        # the "list_id" comes from urls.py
+        
     def get_context_data(self):
         context = super().get_context_data()
         context["todo_list"] = ToDoList.objects.get(id=self.kwargs["list_id"])
         return context
+    
+    # 'context' is a Python dictionary that determines what data is available for rendering. 
+    # The result of .get_queryset() is automatically included in context under the key object_list, but we want the template to be able to 
+    # access the todo_list object itself, and not just the items within it that were returned by the query (ie so when we list the items in the to-do list
+    # we can also state which to-do list they came from
 
 class ListCreate(CreateView):
     model = ToDoList
